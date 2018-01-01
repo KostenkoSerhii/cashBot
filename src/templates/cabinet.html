@@ -1,0 +1,153 @@
+---
+title: cabinet page
+footerSpecBg: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{% include "partials/_header.html" %}
+<!--begin content-block-->
+<div class="content-block">
+	{% include "partials/_hero-sm.html" %}
+	<!--begin cabinet-->
+	<div class="cab">
+		<!--begin l-->
+		<div class="l l--sm">
+			<div class="cab__links-line">
+				<a class="is-active" href="#"><span>Инвестору</span></a>
+				<a href="#"><span>Партнёру</span></a>
+			</div>
+			<!--begin cab__profit-->
+			<div class="cab__profit">
+				<div class="cab__profit-left">
+					<i>{{mixins.icon('wallet')}}</i>
+					<span>За 30 дней Вами заработано</span>
+				</div>
+				<div class="cab__profit-right">
+					<div class="cab__counter">
+						<div><span>1</span></div>
+						<div><span>2</span></div>
+						<div><span>7</span></div>
+						<div><span>1</span></div>
+						<div><span>2</span></div>
+					</div>
+					<span class="cab__profit-cash-name">usd</span>
+				</div>
+			</div>
+			<!--end cab__profit-->
+			<!--begin cab__blocks-->
+			<div class="cab__blocks">
+				<!--begin cblock-->
+				<div class="cblock cblock--blue-l">
+					<div class="cblock__bg"></div>
+					<!--begin cblock__inner-->
+					<div class="cblock__inner">
+						<p class="cblock__title"><span>Состояние счёта</span></p>
+						<div class="cblock__aft-title-line">
+							<span>Валюта</span>
+							<select class="js-select">
+								<option value="" >USD</option>
+								<option value="" >USD2</option>
+								<option value="" >USD3</option>
+								<option value="" >USD4</option>
+							</select>
+						</div>
+						<!--begin cblock__two-col-->
+						<div class="cblock__two-col">
+							<div class="cblock__left">
+								<p class="cblock__title-sec">
+									Балланс
+								</p>
+								<p class="cblock__value">1000 USD</p>
+								
+							</div>
+							<div class="cblock__right">
+								<p class="cblock__title-sec">
+									В депозитах
+								</p>
+								<p class="cblock__value">1000 USD</p>
+								
+							</div>
+						</div>
+						<!--end cblock__two-col-->
+						<div class="cblock__btns">
+							<button class="btn btn--blue-l cblock__btns-left">Пополнить</button>
+							<button class="btn btn--blue cblock__btns-right">Вывести</button>
+						</div>
+					</div>
+					<!--end cblock__inner-->
+				</div>
+				<!--end cblock-->
+				<!--begin cblock-->
+				<div class="cblock cblock--blue">
+					<div class="cblock__bg"></div>
+					<!--begin cblock__inner-->
+					<div class="cblock__inner">
+						<p class="cblock__title"><span>Оформить депозит</span></p>
+						<div class="cblock__aft-title-line">
+							<span>Валюта</span>
+							<select class="js-select">
+								<option value="" >USD</option>
+								<option value="" >USD</option>
+								<option value="" >USD</option>
+								<option value="" >USD</option>
+							</select>
+						</div>
+						<!--begin cblock__two-col-->
+						<div class="cblock__two-col">
+							<div class="cblock__left">
+								<p class="cblock__title-sec">
+									Пополнить на сумму
+								</p>
+							</div>
+							<div class="cblock__right cblock__right--pad-sm">
+								<div class="cblock__field">
+									<input type="text" value="1000 USD">
+								</div>
+							</div>
+						</div>
+						<!--end cblock__two-col-->
+						<!--begin cblock__two-col-->
+						<div class="cblock__two-col">
+							<div class="cblock__left">
+								<p class="cblock__title-sec">
+									Ваш тариф
+								</p>
+							</div>
+							<div class="cblock__right cblock__right--pad-sm">
+								<div class="cblock__field">
+									<select class="js-select-big">
+										<option value="" >Премиальный</option>
+										<option value="" >Премиальный1</option>
+										<option value="" >Премиальный2</option>
+										<option value="" >Премиальный3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!--end cblock__two-col-->
+						<div class="cblock__btns">
+							<button class="btn btn--blue-l cblock__btns-left">Пополнить</button>
+						</div>
+						
+					</div>
+					<!--end cblock__inner-->
+				</div>
+				<!--end cblock-->
+			</div>
+			<!--end cab__blocks-->
+			<h2 class="title-lg">Текущие депозиты</h2>
+			{% include "partials/_adm-table.html" %}
+			<h2 class="title-lg">История счета</h2>
+			{% include "partials/_adm-table2.html" %}
+		</div>
+		<!--end l-->
+	</div>
+	<!--end cabinet-->
+
+
+</div>
+<!--end content-block-->
+{% include "partials/_footer.html" %}
+
+{% endblock %}

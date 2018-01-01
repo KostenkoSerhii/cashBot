@@ -1,0 +1,215 @@
+.cab
+	&__links-line
+		font-size: 0
+		text-align: center
+		margin-bottom: 42px
+		a
+			color: $bg-blue
+			+play
+			font-size: 30px
+			display: inline-block
+			vertical-align: top
+			height: 55px
+			min-width: 195px
+			margin-right: 8px
+			background: $white
+			border: 1px solid $bg-blue
+			border-radius: 4px
+			transform: skew(25deg)
+			+trans
+			span
+				line-height: 50px
+				transform: skew(-25deg)
+				display: inline-block
+				vertical-align: top
+			&:last-of-type
+				margin-right: 0
+			&.is-active
+				color: $white
+				background: $bg-blue
+			&:hover
+				background: $bg-blue
+				color: $white
+	&__profit
+		margin-bottom: 80px
+		+clr
+		background: $bg-blue
+		color: $white
+		font-size: 24px
+		min-height: 68px
+		+play
+	&__profit-left
+		float: left
+		padding-left: 15px
+		padding-top: 11px
+		span
+			display: inline-block
+			vertical-align: top
+			line-height: 48px
+		i
+			margin-right: 32px
+		svg
+			font-size: 44px
+			fill: $white
+	&__profit-right
+		float: right
+		font-size: 0
+		span
+			display: inline-block
+			vertical-align: top
+			line-height: 68px
+	&__profit-cash-name
+		font-size: 24px
+		min-width: 68px
+		text-align: center
+	&__counter
+		display: inline-block
+		vertical-align: top
+		padding: 0 9px
+		background: white
+		div
+			font-size: 48px
+			font-weight: 700
+			width: 51px
+			background: $bg-blue
+			margin-right: 5px
+			text-align: center
+			position: relative
+			display: inline-block
+			vertical-align: top
+			&:last-of-type
+				margin-right: 0
+			&:before, &:after
+				content: ''
+				position: absolute
+				top: 50%
+				width: 100%
+				left: 0
+			&:before
+				background-color: #014376
+				height: 1px
+				z-index: 2
+			&:after
+				content: ''
+				height: 20px
+				z-index: 0
+				background-image: linear-gradient(to top, #0171c5 0%, #005ca1 100%)
+		span
+			position: relative
+			z-index: 1
+	&__blocks
+		font-size: 0
+		margin-bottom: 76px
+		.cblock
+			margin-right: 31px
+			&:last-of-type
+				margin-right: 0
+.cblock
+	width: 457px
+	height: 278px
+	display: inline-block
+	vertical-align: top
+	background-color: $white
+	box-shadow: 3px 5.2px 10px rgba(0, 0, 0, 0.29)
+	position: relative
+	padding: 16px 18px 28px
+	
+	&__bg
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			z-index: 1
+			top: -318px
+			left: -31px
+			width: 513px
+			height: 380px
+			box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.24)
+			border-radius: 20px
+			transform-origin: 50% 50%
+			transform: rotate(16deg)
+	&__inner
+		position: relative
+		z-index: 2
+	&__title
+		text-align: right
+		font-size: 24px
+		color: $white
+		+play
+		text-transform: uppercase
+		padding-right: 12px
+		margin-bottom: 27px
+		span
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				width: 51px
+				height: 1px
+				background-color: $white
+				bottom: -12px
+	&__aft-title-line
+		margin-bottom: 32px
+		&>span
+			font-size: 18px
+			color: $black
+			display: inline-block
+			vertical-align: top
+			margin-right: 12px
+	&__title-sec
+		color: $bg-blue
+		font-size: 18px
+		margin-bottom: 16px
+	&__two-col
+		+clr
+		padding-left: 30px
+		padding-right: 25px
+	&__left, &__right
+		
+		width: 50%
+	&__left
+		float: left
+	&__right
+		float: right
+		padding-left: 51px
+		&--pad-sm
+			padding-left: 23px
+	&__value
+		font-size: 18px
+		color: $black
+		margin-bottom: 14px
+		
+	&__field
+	
+		input
+			width: 100%
+			height: 28px
+			line-height: 28px
+			font-size: 18px
+			background-color: $white
+			border: 1px solid $gray2
+			padding: 0 9px
+	&__btns
+		padding: 0 17px 0 22px
+		+clr
+		&-left
+			float: left
+		&-right
+			float: right
+	&--blue
+		.cblock__bg
+			&:before
+				background-color: $bg-blue3
+				background-image: linear-gradient(180deg, #217b99 0%, #3d489a 100%)
+	&--blue-l
+		.cblock__bg
+			&:before
+				background-color: $bg-blue3
+				background-image: linear-gradient(180deg, #2cd8da 0%, #039bb2 100%)

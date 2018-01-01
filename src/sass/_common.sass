@@ -1,0 +1,223 @@
+=rob
+	font-family: 'Roboto', sans-serif
+=play
+	font-family: 'Play', sans-serif
+
+=lgmin
+	@media only screen and (min-width: "1921px")
+		@content
+=lg
+	@media only screen and (max-width: "1170px")
+		@content
+=l
+	@media only screen and (max-width: "1023px")
+		@content
+=m
+	@media only screen and (max-width: "991px")
+		@content
+=xs
+	@media only screen and (max-width: "767px")
+		@content
+
+$white: #fff
+$black: #00182b
+$black1: #011324
+$blue: #3f8bc6
+$blue2: #1a739f
+$blue3: #218fbf
+$blue4: #109fcc
+$blue5: #3b87c0
+$blue6: #016378
+$blue7: #2ab8bf
+$bg-blue: #0171c5
+$bg-blue2: #005ca1
+$bg-blue3: #797a7a
+$bg-blue5: #1fc4cd
+$bg-blue6: #d5ecfc
+$gray-l: #f0f4f7
+$gray2: #cfcdcd
+$orange: #fd6103
+$orange2: #f8a035
+$orange3: #fc7309
+$green: #01ae26
+$red: #fb270b
+
+a
+	text-decoration: none
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+body
+	background: #FFF
+	+rob
+	line-height: 1.4
+	color: $black
+	font-size: 18px
+.out
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	min-height: 100vh
+.content-block
+	flex: 1
+.title-line
+	+play
+	font-weight: 400
+	color: $blue2
+	margin-bottom: 34px
+	line-height: 1
+	font-size: 30px
+	span
+		font-weight: 700
+	i
+		display: inline-block
+		position: relative
+		bottom: 4px
+		vertical-align: bottom
+		width: 80px
+		margin-left: 8px
+		height: 2px
+		background: $blue6
+		+m
+			display: none
+.title-lg, .article h2
+	color: $blue3
+	+play
+	font-size: 24px
+	font-weight: 700
+	margin-bottom: 13px
+	line-height: 1
+.title-m, .article h3
+	line-height: 1
+	color: $blue3
+	+play
+	font-size: 22px
+	margin-bottom: 20px
+
+.article
+	color: $black
+	font-size: 18px
+	font-weight: 100
+	line-height: 1.2
+	// margin-bottom: 50px
+	a
+		color: $blue5
+		+rob
+		font-size: 16px
+		font-weight: 100
+		text-decoration: underline
+	p
+		margin-bottom: 10px
+	&>div:not(.two-col)
+		margin-bottom: 35px
+	ul, ol
+		li
+			position: relative
+			padding-left: 22px
+			margin-bottom: 12px
+			&:last-of-type
+				margin-bottom: 0
+	ul
+		li
+			&:before
+				content: ''
+				position: absolute
+				top: 6px
+				left: 0
+				width: 9px
+				height: 9px
+				background-color: $green
+	ol
+		span
+			position: absolute
+			font-size: 18px
+			color: $green
+			left: 4px
+			top: 0
+			font-weight: 500
+.two-col
+	+clr
+	margin-bottom: 25px
+
+	&__left
+
+		float: left
+		width: 58.5%
+		padding-left: 17px
+		position: relative
+		padding-right: 24px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 4px
+			height: 35px
+			background-color: $blue6
+	&__right
+		float: right
+		width: 40%
+		img
+			width: 100%
+			height: auto
+
+blockquote
+	appearance: none
+	border: none
+	background: none
+	color: $blue4
+	+rob
+	font-size: 18px
+	font-weight: 300
+	font-style: italic
+	padding-left: 40px
+	position: relative
+	display: block
+	margin-bottom: 17px
+	margin-top: 17px
+	&:before
+		content: ''
+		position: absolute
+		left: 20px
+		top: 0
+		background-image: url('../img/quit.png')
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		width: 13px
+		height: 13px
+.link
+	color: $blue5
+	+rob
+	font-size: 16px
+	font-weight: 100
+	position: relative
+	text-decoration: underline
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 1px
+	// 	background: $blue5
+	// 	bottom: 0px
+	// 	+trans
+	// &:hover
+	// 	&:after
+	// 		background: transparent
+	// 	+trans
+.btn
+	appearance: none
+	border: 1px solid transparent
+	border-radius: 15px
+	background: transparent
+	font-size: 20px
+	+play
+	color: $white
+	border-radius: 15px
+	padding: 7px 10px
+	min-width: 149px
+	text-align: center
+	&--blue-l
+		background-color: $bg-blue5
+	&--blue
+		background-color: $bg-blue
+		

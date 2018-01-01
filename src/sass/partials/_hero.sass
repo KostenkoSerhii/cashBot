@@ -1,0 +1,42 @@
+.hero
+	position: relative
+
+	&__bg
+		position: absolute
+		width: 100%
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		z-index: -2
+		width: 100%
+		min-width: 1920px
+	&__inner
+	&__logo-block
+		text-align: center
+		position: relative
+
+	&__logo
+		text-align: center
+	&__light
+		position: absolute
+		z-index: -1
+		left: 50%
+		top: -13px
+		transform: translate(-50%, 0%)
+	&--sm
+		padding-top: 21px
+		padding-bottom: 20px
+		margin-bottom: 50px
+		min-height: 144px
+		+lgmin
+			margin-bottom: 60px
+		.hero__bg
+			height: 430px
+
+			// height: calc(100% + 280px)
+			background-size: cover
+			background-position: 50% 100%
+			background-repeat: no-repeat
+			+lgmin
+				height: 450px
+

@@ -1,0 +1,75 @@
+.header
+	padding-top: 25px
+	padding-bottom: 13px
+	margin-bottom: 5px
+	border-bottom: 3px solid $orange
+	&__inner
+		display: flex
+		justify-content: space-between
+	&__left
+		padding-top: 3px
+		flex-grow: 0
+		color: $black1
+		font-size: 16px
+		+play
+		font-weight: 400
+		i
+			width: 27px
+			height: 27px
+			border-radius: 50%
+			background: $orange2
+			text-align: center
+			display: inline-block
+			vertical-align: top
+			padding-top: 5px
+		svg
+			font-size: 17px
+			fill: $white
+		span
+			display: inline-block
+			vertical-align: top
+			padding-top: 5px
+	&__center
+	&__right
+		flex-grow: 0
+	&__user
+		color: $black1
+		a
+			color: $black1
+			font-size: 20px
+			+play
+			+trans
+			&:hover
+				color: $blue
+.nav
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		margin-right: 52px
+		&:last-of-type
+			margin-right: 0
+		&.is-active
+			a
+				color: $blue
+				&:after
+					content: ''
+					position: absolute
+					width: 100%
+					height: 1px
+					background: $blue
+					bottom: -7px
+					left: 0
+	a
+		font-size: 20px
+		+play
+		color: $black1
+		position: relative
+		+trans
+		&:hover
+			color: $blue
+
+
+
+
+	

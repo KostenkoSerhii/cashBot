@@ -1,0 +1,151 @@
+.select
+	position: relative
+	&_full
+		width: 100%
+	select
+		-ms-appearance: none
+		appearance: none
+		cursor: pointer
+		user-select: none
+		width: 100%
+		background: #fff
+		height: 44px
+		line-height: 44px
+		padding: 0 30px 0 12px
+		border: 1px solid gray
+		border-radius: 4px
+		font-size: 16px
+		&::-ms-expand
+			display: none
+		option
+			color: #000
+.sssl
+	position: relative
+	display: inline-block
+	vertical-align: top
+	// min-width: 70px
+	text-align: left
+	+rob
+	font-size: 18px
+	select
+		visibility: hidden
+	select
+		opacity: 0
+		position: absolute
+	&.is-active
+		> ul
+			display: block
+	&.is-disabled
+		opacity: .2
+		> span
+			cursor: not-allowed
+			border-color: #000
+	&.error
+		> span, span.placeholder
+			border-color: red
+			color: transparent
+			&:after
+				opacity: 1
+	> span
+		position: relative
+		display: block
+		cursor: pointer
+		padding: 0 26px 0 10px
+		height: 24px
+		line-height: 24px
+		white-space: nowrap
+		text-overflow: ellipsis
+
+		border: 1px solid $gray2
+		background: $white
+		&.placeholder
+			color: #9b9b9b
+			border-color: gray
+		&:before
+			content: ""
+			position: absolute
+		&:before
+			background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIwIDE5MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIwIDE5MiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSIzMi40LDAgMCwzMi4zIDE2MCwxOTIgMTYwLDE5MiAxNjAsMTkyIDMyMCwzMi4zIDI4Ny42LDAgMTYwLDEyNy4zICIvPjwvc3ZnPg==)
+			width: 10px
+			height: 10px
+			opacity: 1
+			width: 12px
+			height: 10px
+			right: 6px
+			top: 7px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			transform-origin: 50% 50%
+			+trans
+	> ul
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		background: $white
+		z-index: 100
+		border-left: 1px solid $gray2
+		border-right: 1px solid $gray2
+		border-bottom: 1px solid $gray2
+		padding: 0
+		max-height: 200px
+		overflow-x: hidden
+		overflow-y: auto
+
+		list-style-type: none
+
+		li
+			padding: 10px 10px 7px
+			color: $black
+			cursor: pointer
+			line-height: 1
+			+trans
+			&:hover
+				color: $blue
+			&.disabled-item
+				text-decoration: line-through
+				&:hover
+					color: gray
+			&.placeholder-item
+				display: none
+
+.select-custom, .select-custom-big
+	&.is-active
+		ul
+			opacity: 1
+			visibility: visible
+		> span
+
+			&:before
+				transform: rotateX(180deg)
+				// right: 6px
+				// width: 10px
+				// height: 10px
+				// background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzc4LjQgMzc4LjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM3OC40IDM3OC40OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSIzNzguNCw0Mi40IDMzNiwwIDE4OS4yLDE0Ni44IDQyLjQsMCAwLDQyLjQgMTQ2LjgsMTg5LjIgMCwzMzYgNDIuNCwzNzguNCAxODkuMiwyMzEuNiAzMzYsMzc4LjQgMzc4LjQsMzM2IDIzMS42LDE4OS4yICIvPjwvc3ZnPg==)
+	ul
+		opacity: 0
+		display: block
+		visibility: hidden
+		transition: opacity .3s, visibility .3s
+		> li
+			font-size: 14px
+			transition: color .3s
+
+			&.is-active
+				display: none
+
+				// background: transparent
+	> span
+		&:after
+			transition: transform .3s
+.select-custom
+	min-width: 70px
+.select-custom-big
+	&.sssl
+		width: 100%
+		&> span
+			height: 28px
+			line-height: 28px
+			&:before
+				top: 9px
