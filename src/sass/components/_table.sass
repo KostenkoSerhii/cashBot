@@ -1,8 +1,15 @@
+.table-wrapper
+	// width: 946px
+	overflow-x: auto
+	&--mb
+		margin-bottom: 70px
+		+m
+			margin-bottom: 25px
+	+m
+		
 .table
-	width: 946px
 	border-collapse: collapse
-	overflow: auto
-
+	width: 946px
 	tr
 		border-bottom: 10px solid $white
 		&:first-of-type
@@ -21,5 +28,5 @@
 		+play
 		font-size: 20px
 		text-decoration: underline
-	&--mb
-		margin-bottom: 70px
+		+xs
+			font-size: 14px

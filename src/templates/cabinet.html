@@ -137,9 +137,19 @@ footerSpecBg: true
 			</div>
 			<!--end cab__blocks-->
 			<h2 class="title-lg">Текущие депозиты</h2>
-			{% include "partials/_adm-table.html" %}
+			<!--begin table-wrapper-->
+			<div class="table-wrapper table-wrapper--mb">
+				{% include "partials/_adm-table.html" %}
+			</div>
+			<!--end table-wrapper-->
+
 			<h2 class="title-lg">История счета</h2>
-			{% include "partials/_adm-table2.html" %}
+			<!--begin table-wrapper-->
+			<div class="table-wrapper">
+				{% include "partials/_adm-table2.html" %}
+			</div>
+			<!--end table-wrapper-->
+
 		</div>
 		<!--end l-->
 	</div>

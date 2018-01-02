@@ -9,9 +9,19 @@
   font-style: normal;
 }
 
-$icon-btc: "\EA01";
-$icon-facebook: "\EA02";
-$icon-wallet: "\EA03";
+$icon-about-step2: "\EA01";
+$icon-about-step3: "\EA02";
+$icon-about-step5: "\EA03";
+$icon-about-step6: "\EA04";
+$icon-arrow-l: "\EA05";
+$icon-arrow-r: "\EA06";
+$icon-btc: "\EA07";
+$icon-coin: "\EA08";
+$icon-facebook: "\EA09";
+$icon-graph: "\EA0A";
+$icon-money: "\EA0B";
+$icon-travel: "\EA0C";
+$icon-wallet: "\EA0D";
 
 
 %icon {
@@ -30,6 +40,16 @@ $icon-wallet: "\EA03";
   display: inline-block;
 }
 
+.icon-about-step2:before { content: $icon-about-step2; }
+.icon-about-step3:before { content: $icon-about-step3; }
+.icon-about-step5:before { content: $icon-about-step5; }
+.icon-about-step6:before { content: $icon-about-step6; }
+.icon-arrow-l:before { content: $icon-arrow-l; }
+.icon-arrow-r:before { content: $icon-arrow-r; }
 .icon-btc:before { content: $icon-btc; }
+.icon-coin:before { content: $icon-coin; }
 .icon-facebook:before { content: $icon-facebook; }
+.icon-graph:before { content: $icon-graph; }
+.icon-money:before { content: $icon-money; }
+.icon-travel:before { content: $icon-travel; }
 .icon-wallet:before { content: $icon-wallet; }

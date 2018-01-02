@@ -1,0 +1,411 @@
+.hero-slider
+	width: 723px
+	border-bottom: 2px solid $blue6
+	border-left: 2px solid $blue6
+	border-right: 2px solid $blue6
+	margin-left: auto
+	margin-right: auto
+	position: relative
+	margin-bottom: 36px
+	top: -13px
+	
+	&:before, &:after
+		content: ''
+		position: absolute
+		top: 0
+		background: $blue6
+		height: 2px
+		width: 193px
+	&:before
+		left: 0
+	&:after
+		right: 0
+	&__blick
+		position: absolute
+		opacity: 0
+		top: 0
+		left: 0
+		width: 66px
+		height: 50px
+		margin-top: -25px
+		margin-left: -33px
+		z-index: 2
+	&__anim-line
+		position: absolute
+		background: #6abdfd
+		z-index: 1
+	&__tl
+		top: 0
+		left: 0
+		width: 0
+		height: 2px
+	&__tr
+		left: calc(100% - 193px)
+		top: 0
+		width: 0
+		height: 2px
+	&__r
+		top: 0
+		right: -2px
+		height: 0
+		width: 2px
+	&__b
+		bottom: -2px
+		right: -2px
+		width: 0
+		height: 2px
+	&__l
+		left: -2px
+		bottom: 0
+		width: 2px
+		height: 0
+	&__inner
+		height: 100%
+		position: relative
+		height: 155px
+	&__slide
+		transition: all 1s
+		transform-origin: 50% 50%
+		opacity: 0
+		transform: scale(0)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		padding: 30px 15px 0px
+		text-align: center
+		&.is-active
+			transform: scale(1)
+			opacity: 1
+	&__title
+		font-size: 35px
+		+play
+		color: $white
+		margin-bottom: 8px
+	&__text
+		font-size: 19px
+		+play
+		color: $blue8
+.adventages
+	font-size: 0
+	text-align: center
+	&__item
+		margin-right: 15px
+		padding: 0 5px
+		display: inline-block
+		vertical-align: top
+		width: 240px
+		&:last-of-type
+			margin-right: 0
+		&--left
+		&--right
+	&__img
+		margin-bottom: 22px
+		img
+			height: 48px
+			width: auto
+	&__text
+		font-size: 24px
+		color: $white
+		line-height: 1.2
+		+play
+.about
+	position: relative
+
+	padding-top: 65px
+	padding-bottom: 60px
+	+bigmin
+		padding-top: 100px
+	&__bg
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		z-index: -3
+		width: 100%
+		min-width: 1920px
+		height: 1088px
+		background-position: 50% 100%
+		background-repeat: no-repeat
+		background-size: cover
+		+bigmin
+			height: 1160px
+	&__top-anim 
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 48px
+	&__title, &__hand, &__text
+		+lgmin
+			opacity: 0
+	&__title
+		margin-bottom: 31px
+	&__hand
+		position: absolute
+		top: 83px
+		right: -376px
+	&__text
+		max-width: 710px
+		line-height: 1.25
+		letter-spacing: 0.5px
+		// max-width: 643px
+.asteps
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	position: relative
+	&__line
+		display: block
+		font-size: 0
+		position: absolute
+		+trans
+		svg
+			fill: $blue6
+		
+		&--1, &--4, &--7
+			height: 1px
+			background: $blue6
+		&--1
+			top: 14.5%
+			left: 197px
+			width: 165px
+		&--2
+			top: 14.5%
+			left: 510px
+			svg
+				width: 74px
+				height: 62px
+		&--3
+			top: 31.3%
+			left: 510px
+			svg
+				width: 74px
+				height: 62px
+		&--4
+			top: 46.1%
+			left: 230px
+			width: 271px
+
+		&--5
+			top: 46.1%
+			left: 146px
+			svg
+				width: 74px
+				height: 62px
+		&--6
+			top: 63.3%
+			left: 146px
+			svg
+				width: 74px
+				height: 62px
+		&--7
+			top: 77.3%
+			left: 335px
+			width: 198px
+	&__item
+		text-align: center
+		max-width: 295px
+		display: inline-block
+		vertical-align: top
+		&--money
+			margin-right: 114px
+			margin-bottom: 105px
+		&--graph
+			margin-bottom: 105px
+		&--coin
+			margin-left: 201px
+			margin-right: 100px
+		&--travel
+		p
+			color: $blue6
+			+play
+			font-size: 20px
+			line-height: 1.2
+			+m
+				font-size: 15px
+	&__img
+		margin-bottom: 28px
+		svg
+			fill: $blue9
+			+trans
+			font-size: 80px
+.why-we
+	position: relative
+	min-height: 496px
+	padding-top: 40px
+	&__bg
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: -146px
+		z-index: -1
+		width: 100%
+		min-width: 1924px
+		height: 641px
+		background-repeat: no-repeat
+		background-size: cover
+		// min-height: 641px
+		background-position: 50% 100%
+	&__inner
+		+clr
+	&__left, &__right
+		+lgmin
+			opacity: 0
+	&__left
+		float: left
+		width: 68%
+		padding-right: 25px
+	&__right
+		float: right
+		width: 32%
+		padding-top: 22px
+		img
+			position: relative
+			top: -23px
+			left: 28px
+	&__title
+		margin-bottom: 38px
+	&__list
+		margin-left: 55px
+.plans
+	position: relative
+	padding-top: 43px
+	padding-bottom: 68px
+	&__bg
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: -288px
+		z-index: -3
+		width: 100%
+		min-width: 1920px
+		height: 1236px
+		background-position: 50% 100%
+		background-repeat: no-repeat
+		background-size: cover
+		// +bigmin
+		// 	height: 1160px
+	&__title
+		margin-bottom: 38px
+	&__inner
+		max-width: 980px
+		margin-left: auto
+		margin-right: auto
+
+.pslide
+	width: 293px
+	max-width: 293px
+	text-align: left
+	+trans
+	// transform-origin: 50% 50%
+	background-color: $white
+	box-shadow: 3px 5.2px 10px rgba(0, 0, 0, 0.29)
+	position: relative
+	&__inner
+		position: relative
+		z-index: 1
+		min-height: 557px
+		padding: 10px 21px 66px
+	&__bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		overflow: hidden
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 360px
+			height: 306px
+			border-radius: 5px
+			background-color: #797a7a
+			box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.24)
+			transform: rotate(28deg)
+			+trans
+		&:before
+			top: -214px
+			left: -29px
+		&:after
+			bottom: -235px
+			left: -48px
+		&--blue-l
+			&:before, &:after
+				background-image: linear-gradient(180deg, #328cab 0%, #03bafd 100%)
+		&--blue-m
+			&:before, &:after
+				background-image: linear-gradient(180deg, #2cd8da 0%, #039bb2 100%)
+		&--blue
+			&:before, &:after
+				background-image: linear-gradient(180deg, #217b99 0%, #3d489a 100%)
+	&__title
+		color: $white
+		+play
+		font-size: 23px
+		text-transform: uppercase
+		text-align: center
+		position: relative
+		margin-bottom: 23px
+		&:after
+			content: ''
+			position: absolute
+			bottom: -12px
+			width: 50px
+			height: 1px
+			background: $white
+			left: 50%
+			transform: translateX(-50%)
+	&__btc, &__perc
+		
+		color: $white
+		font-weight: 700
+		text-align: right
+	&__btc
+		font-size: 22px
+		padding-right: 8px
+		line-height: 1
+		margin-bottom: 8px
+		+play
+	&__perc
+		font-size: 30px
+		padding-right: 23px
+		line-height: 1
+		margin-bottom: 55px
+	&__line
+		+clr
+		margin-bottom: 21px
+		&:last-of-type
+			margin-bottom: 0
+	&__left, &__right
+		color: $black
+		font-size: 18px
+		max-width: 60%
+	&__left
+		float: left
+	&__right
+		float: right
+		text-align: right
+	&__btn
+		position: absolute
+		bottom: 14px
+		left: 20px
+	&:hover
+		.pslide__bg
+			&:before, &:after
+				// background-color: $orange
+				background-image: linear-gradient(180deg, #fd6103 0%, #fa9013 100%)
+		.pslide__btn
+			background-color: $red
+.prefooter
+	padding-top: 33px
+	&__title
+		margin-bottom: 27px
+	&__text
+		text-align: center
+		font-size: 22px
+		color: $black
+		margin-bottom: 45px
+		line-height: 1.2
+		a
+			color: $blue2

@@ -8,28 +8,38 @@ function scrollMagic(){
 			triggerHook: "onEnter"
 		}
 	});
-// why we
+// about hand anim
 new ScrollMagic.Scene({
 		// duration: 100,	
+		offset: 80,
+		triggerElement: ".js-about-hand",
+		reverse: false
+	})
+.addTo(controller)
+.on("enter", function(e){
+	PubSub.publish('about-hand-animation');
+});
+// about step anim
+new ScrollMagic.Scene({
 		offset: 150,
-		triggerElement: ".js-ww-block",
+		triggerElement: ".js-steps",
+		reverse: false
+	})
+.addTo(controller)
+.on("enter", function(e){
+	PubSub.publish('about-steps-animation');
+});
+// why weanim
+new ScrollMagic.Scene({
+		offset: 100,
+		triggerElement: ".js-why-we",
 		reverse: false
 	})
 .addTo(controller)
 .on("enter", function(e){
 	PubSub.publish('why-we-animation');
 });
-// why we
 
-new ScrollMagic.Scene({
-		offset: 150,
-		triggerElement: ".js-tech",
-		reverse: false
-	})
-.addTo(controller)
-.on("enter", function(e){
-	PubSub.publish('tech-animation');
-});
 
 
 }

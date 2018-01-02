@@ -1,15 +1,18 @@
 .hero
 	position: relative
-
+	padding-top: 56px
+	min-height: 650px
 	&__bg
 		position: absolute
-		width: 100%
 		left: 50%
 		transform: translateX(-50%)
 		top: 0
 		z-index: -2
 		width: 100%
 		min-width: 1920px
+		height: 990px
+		background-repeat: no-repeat
+		background-size: cover
 	&__inner
 	&__logo-block
 		text-align: center
@@ -23,20 +26,26 @@
 		left: 50%
 		top: -13px
 		transform: translate(-50%, 0%)
+		&--main
+			top: -20px
+		+xs
+			width: 260px
+			top: 4px
 	&--sm
 		padding-top: 21px
 		padding-bottom: 20px
 		margin-bottom: 50px
 		min-height: 144px
-		+lgmin
+		+bigmin
 			margin-bottom: 60px
+		+m
+			margin-bottom: 20px
 		.hero__bg
 			height: 430px
-
 			// height: calc(100% + 280px)
 			background-size: cover
 			background-position: 50% 100%
 			background-repeat: no-repeat
-			+lgmin
+			+bigmin
 				height: 450px
 

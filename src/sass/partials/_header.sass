@@ -3,9 +3,15 @@
 	padding-bottom: 13px
 	margin-bottom: 5px
 	border-bottom: 3px solid $orange
+	+m
+		padding-top: 15px
+	+xs
+		text-align: center
 	&__inner
 		display: flex
 		justify-content: space-between
+		+xs
+			display: block
 	&__left
 		padding-top: 3px
 		flex-grow: 0
@@ -13,6 +19,11 @@
 		font-size: 16px
 		+play
 		font-weight: 400
+		+m
+			padding-top: 0
+			font-size: 14px
+		+xs
+			margin-bottom: 15px
 		i
 			width: 27px
 			height: 27px
@@ -41,13 +52,21 @@
 			+trans
 			&:hover
 				color: $blue
+			+m
+				font-size: 16px
+			+xs
+				font-size: 14px
 .nav
 	font-size: 0
+	+xs
+		margin-bottom: 15px
 	li
 		display: inline-block
 		vertical-align: top
 		margin-right: 52px
 		&:last-of-type
+			margin-right: 0
+		+xs
 			margin-right: 0
 		&.is-active
 			a
@@ -60,6 +79,10 @@
 					background: $blue
 					bottom: -7px
 					left: 0
+					+xs
+						display: none
+		+m
+			margin-right: 25px
 	a
 		font-size: 20px
 		+play
@@ -68,6 +91,11 @@
 		+trans
 		&:hover
 			color: $blue
+		+m
+			font-size: 16px
+		+xs
+			font-size: 14px
+			padding: 5px
 
 
 

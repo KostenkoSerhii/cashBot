@@ -3,8 +3,11 @@
 =play
 	font-family: 'Play', sans-serif
 
-=lgmin
+=bigmin
 	@media only screen and (min-width: "1921px")
+		@content
+=lgmin
+	@media only screen and (min-width: "1171px")
 		@content
 =lg
 	@media only screen and (max-width: "1170px")
@@ -29,6 +32,8 @@ $blue4: #109fcc
 $blue5: #3b87c0
 $blue6: #016378
 $blue7: #2ab8bf
+$blue8: #50acf3
+$blue9: #6abdfd
 $bg-blue: #0171c5
 $bg-blue2: #005ca1
 $bg-blue3: #797a7a
@@ -52,6 +57,8 @@ body
 	line-height: 1.4
 	color: $black
 	font-size: 18px
+	+m
+		font-size: 14px
 .out
 	display: flex
 	flex-direction: column
@@ -66,7 +73,11 @@ body
 	margin-bottom: 34px
 	line-height: 1
 	font-size: 30px
-	span
+	+m
+		font-size: 20px
+		margin-bottom: 20px
+	strong
+		font-weight: normal
 		font-weight: 700
 	i
 		display: inline-block
@@ -79,6 +90,10 @@ body
 		background: $blue6
 		+m
 			display: none
+	&--white
+		color: $white
+		i
+			background: $white
 .title-lg, .article h2
 	color: $blue3
 	+play
@@ -86,18 +101,23 @@ body
 	font-weight: 700
 	margin-bottom: 13px
 	line-height: 1
+	+m
+		font-size: 18px
 .title-m, .article h3
 	line-height: 1
 	color: $blue3
 	+play
 	font-size: 22px
 	margin-bottom: 20px
-
+	+m
+		font-size: 13px
 .article
 	color: $black
 	font-size: 18px
 	font-weight: 100
 	line-height: 1.2
+	+m
+		font-size: 14px
 	// margin-bottom: 50px
 	a
 		color: $blue5
@@ -105,10 +125,14 @@ body
 		font-size: 16px
 		font-weight: 100
 		text-decoration: underline
+		+m
+			font-size: 14px
 	p
 		margin-bottom: 10px
 	&>div:not(.two-col)
 		margin-bottom: 35px
+		+m
+			margin-bottom: 20px
 	ul, ol
 		li
 			position: relative
@@ -116,6 +140,8 @@ body
 			margin-bottom: 12px
 			&:last-of-type
 				margin-bottom: 0
+			+m
+				padding-left: 16px
 	ul
 		li
 			&:before
@@ -126,6 +152,8 @@ body
 				width: 9px
 				height: 9px
 				background-color: $green
+				+m
+					top: 2px
 	ol
 		span
 			position: absolute
@@ -134,17 +162,24 @@ body
 			left: 4px
 			top: 0
 			font-weight: 500
+			+m
+				font-size: 14px
+
 .two-col
 	+clr
 	margin-bottom: 25px
-
+	&__left, &__right
+		+m
+			width: 100%
+			float: none
 	&__left
-
 		float: left
 		width: 58.5%
 		padding-left: 17px
 		position: relative
 		padding-right: 24px
+		+m
+			margin-bottom: 20px
 		&:before
 			content: ''
 			position: absolute
@@ -156,9 +191,12 @@ body
 	&__right
 		float: right
 		width: 40%
+		text-align: center
 		img
 			width: 100%
 			height: auto
+			+m
+				max-width: 465px
 
 blockquote
 	appearance: none
@@ -174,6 +212,11 @@ blockquote
 	display: block
 	margin-bottom: 17px
 	margin-top: 17px
+	+m
+		font-size: 14px
+		padding-left: 20px
+		&:before
+			left: 0
 	&:before
 		content: ''
 		position: absolute
@@ -191,19 +234,6 @@ blockquote
 	font-weight: 100
 	position: relative
 	text-decoration: underline
-	// &:after
-	// 	content: ''
-	// 	position: absolute
-	// 	left: 0
-	// 	width: 100%
-	// 	height: 1px
-	// 	background: $blue5
-	// 	bottom: 0px
-	// 	+trans
-	// &:hover
-	// 	&:after
-	// 		background: transparent
-	// 	+trans
 .btn
 	appearance: none
 	border: 1px solid transparent
@@ -216,8 +246,124 @@ blockquote
 	padding: 7px 10px
 	min-width: 149px
 	text-align: center
+	+trans
 	&--blue-l
 		background-color: $bg-blue5
 	&--blue
 		background-color: $bg-blue
-		
+	&--border
+		border-color: $white
+		padding: 3px 10px
+		min-width: 153px
+		font-size: 24px
+	&--red
+		background: $red
+		font-size: 24px
+		padding: 6px 10px
+		min-width: 155px
+		border-color: $red
+		&:hover
+			color: $red
+			background: $white
+.styled-text
+	color: $black
+	font-weight: 100
+	padding-left: 16px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		width: 4px
+		top: 6px
+		bottom: 6px
+		background: $blue6
+.checklist
+	font-weight: 100
+	color: $white
+	font-size: 16px
+	strong
+		font-weight: 500
+	li
+		padding-left: 44px
+		position: relative
+		margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 0
+		&:before, &:after
+			content: ''
+			position: absolute
+		&:before
+			left: 0
+			top: 6px
+			width: 29px
+			height: 29px
+			background: $white
+			z-index: 1
+		&:after
+			background-image: url('../img/check.png')
+			width: 27px
+			height: 27px
+			left: 3px
+			top: 2px
+			background-position: 50% 50%
+			z-index: 2
+.counter
+	border-top: 2px solid $white
+	border-right: 2px solid $white
+	border-bottom: 2px solid $white
+	padding: 8px 20px 35px
+	text-align: center
+	+play
+	&__text
+		font-size: 24px
+		color: $white
+		margin-bottom: 27px
+	&__inner
+		font-size: 0
+		padding-left: 56px
+		span
+			width: 32px
+			height: 42px
+			line-height: 38px
+			background-color: $white
+			border: 1px solid #119cd6
+			border-radius: 3px
+			font-size: 36px
+			color: $blue2
+			display: inline-block
+			vertical-align: top
+			margin-right: 3px
+			&.counter__number-big-mr
+				margin-right: 11px
+		i
+			display: inline-block
+			vertical-align: bottom
+			font-size: 24px
+			color: $white
+			font-style: normal
+.slick-slide
+	text-align: center
+.slick-arrow
+	position: absolute
+	top: 50%
+// .slick-list
+// 	overflow: auto!important
+// 	overflow-x: hidden!important
+.prev-arrow,.next-arrow
+	transform: translateY(-50%)
+	height: 40px
+	width: 24px
+
+	cursor: pointer
+	svg
+		font-size: 24px
+		+trans
+		fill: $blue2
+	&:hover
+		svg
+			fill: $blue6
+.prev-arrow
+	left: -30px
+.next-arrow
+	right: -30px
