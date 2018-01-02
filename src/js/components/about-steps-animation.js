@@ -1,11 +1,10 @@
 import { TimelineMax } from 'gsap';
 import PubSub from 'pubsub-js';
-
 function aboutStepsAnim(){
 	let token = PubSub.subscribe('about-steps-animation', animation);
 	let windowH = $(window).height();
 	let options = {
-		delay: 0
+		delay: 1
 	};
 	if(windowH > 750){
 		options.delay = 3;

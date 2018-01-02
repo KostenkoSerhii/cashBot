@@ -8,7 +8,9 @@
 	position: relative
 	margin-bottom: 36px
 	top: -13px
-	
+	+xs
+		width: 100%
+		margin-bottom: 20px
 	&:before, &:after
 		content: ''
 		position: absolute
@@ -16,6 +18,8 @@
 		background: $blue6
 		height: 2px
 		width: 193px
+		+xs
+			width: 20px
 	&:before
 		left: 0
 	&:after
@@ -30,10 +34,14 @@
 		margin-top: -25px
 		margin-left: -33px
 		z-index: 2
+		+xs
+			display: none
 	&__anim-line
 		position: absolute
 		background: #6abdfd
 		z-index: 1
+		+xs
+			display: none
 	&__tl
 		top: 0
 		left: 0
@@ -75,6 +83,7 @@
 		left: 0
 		padding: 30px 15px 0px
 		text-align: center
+
 		&.is-active
 			transform: scale(1)
 			opacity: 1
@@ -83,10 +92,14 @@
 		+play
 		color: $white
 		margin-bottom: 8px
+		+xs
+			font-size: 16px
 	&__text
 		font-size: 19px
 		+play
 		color: $blue8
+		+xs
+			font-size: 14px
 .adventages
 	font-size: 0
 	text-align: center
@@ -96,12 +109,39 @@
 		display: inline-block
 		vertical-align: top
 		width: 240px
+		+m
+			display: block
+			margin-bottom: 20px
+			margin-left: auto
+			margin-right: auto
 		&:last-of-type
 			margin-right: 0
+			+m
+				margin-right: auto
 		&--left
+			.adventages__img
+				&:after
+					left: 60%
+					+m
+						left: 50%
 		&--right
+			.adventages__img
+				&:after
+					left: 40%
+					+m
+						left: 50%
 	&__img
 		margin-bottom: 22px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			width: 38px
+			height: 2px
+			background-color: #016378
+			bottom: -10px
 		img
 			height: 48px
 			width: auto
@@ -112,11 +152,13 @@
 		+play
 .about
 	position: relative
-
 	padding-top: 65px
 	padding-bottom: 60px
 	+bigmin
 		padding-top: 100px
+	+m
+		padding-top: 30px
+		padding-bottom: 30px
 	&__bg
 		position: absolute
 		left: 50%
@@ -131,6 +173,8 @@
 		background-size: cover
 		+bigmin
 			height: 1160px
+		+m
+			display: none
 	&__top-anim 
 		display: inline-block
 		vertical-align: top
@@ -144,21 +188,29 @@
 		position: absolute
 		top: 83px
 		right: -376px
+		+lg
+			display: none
 	&__text
 		max-width: 710px
 		line-height: 1.25
 		letter-spacing: 0.5px
+		+m
+			max-width: 100%
 		// max-width: 643px
 .asteps
 	display: inline-block
 	vertical-align: top
 	font-size: 0
 	position: relative
+	+m
+		display: block
 	&__line
 		display: block
 		font-size: 0
 		position: absolute
 		+trans
+		+m
+			display: none
 		svg
 			fill: $blue6
 		
@@ -207,6 +259,12 @@
 		max-width: 295px
 		display: inline-block
 		vertical-align: top
+		+m
+			display: block
+			margin-left: auto
+			margin-right: auto
+			max-width: 260px
+			margin-bottom: 20px
 		&--money
 			margin-right: 114px
 			margin-bottom: 105px
@@ -225,14 +283,22 @@
 				font-size: 15px
 	&__img
 		margin-bottom: 28px
+		+m
+			margin-bottom: 15px
 		svg
 			fill: $blue9
 			+trans
 			font-size: 80px
+			+m
+				font-size: 60px
 .why-we
 	position: relative
 	min-height: 496px
 	padding-top: 40px
+	+m
+		padding-top: 30px
+		background: $bg-blue
+		padding-bottom: 30px
 	&__bg
 		position: absolute
 		left: 50%
@@ -246,15 +312,24 @@
 		background-size: cover
 		// min-height: 641px
 		background-position: 50% 100%
+		+m
+			display: none
+
 	&__inner
 		+clr
 	&__left, &__right
 		+lgmin
 			opacity: 0
+		+m
+			float: none
+			width: 100%
+			padding: 0
 	&__left
 		float: left
 		width: 68%
 		padding-right: 25px
+		+m
+			margin-bottom: 20px
 	&__right
 		float: right
 		width: 32%
@@ -263,14 +338,22 @@
 			position: relative
 			top: -23px
 			left: 28px
+			+m
+				display: none
 	&__title
 		margin-bottom: 38px
 	&__list
 		margin-left: 55px
+		+m
+			margin-left: 0
 .plans
 	position: relative
 	padding-top: 43px
 	padding-bottom: 68px
+	+xs
+		padding-top: 30px
+		padding-bottom: 30px
+		background: $gray-l
 	&__bg
 		position: absolute
 		left: 50%
@@ -283,19 +366,29 @@
 		background-position: 50% 100%
 		background-repeat: no-repeat
 		background-size: cover
-		// +bigmin
-		// 	height: 1160px
+		+m
+			display: none
+
 	&__title
 		margin-bottom: 38px
 	&__inner
 		max-width: 980px
 		margin-left: auto
 		margin-right: auto
+		+lg
+			max-width: 930px
+		+m
+			max-width: 360px
+		+xs
+			max-width: 240px
 
 .pslide
 	width: 293px
 	max-width: 293px
 	text-align: left
+	+xs
+		width: 240px
+		max-width: 240px
 	+trans
 	// transform-origin: 50% 50%
 	background-color: $white
@@ -306,6 +399,9 @@
 		z-index: 1
 		min-height: 557px
 		padding: 10px 21px 66px
+		+xs
+			min-height: auto
+			padding: 10px 15px 15px
 	&__bg
 		position: absolute
 		top: 0
@@ -314,6 +410,8 @@
 		height: 100%
 		z-index: 0
 		overflow: hidden
+		+xs
+			display: none
 		&:before, &:after
 			content: ''
 			position: absolute
@@ -327,6 +425,9 @@
 		&:before
 			top: -214px
 			left: -29px
+			+xs
+				top: -230px
+				left: -60px
 		&:after
 			bottom: -235px
 			left: -48px
@@ -347,6 +448,10 @@
 		text-align: center
 		position: relative
 		margin-bottom: 23px
+		+xs
+			font-size: 20px
+			margin-bottom: 15px
+			color: $blue
 		&:after
 			content: ''
 			position: absolute
@@ -357,30 +462,44 @@
 			left: 50%
 			transform: translateX(-50%)
 	&__btc, &__perc
-		
 		color: $white
 		font-weight: 700
 		text-align: right
+		+xs
+			color: $blue
+			text-align: center
+			padding-right: 0
 	&__btc
 		font-size: 22px
 		padding-right: 8px
 		line-height: 1
 		margin-bottom: 8px
 		+play
+		+xs
+			font-size: 16px
 	&__perc
 		font-size: 30px
 		padding-right: 23px
 		line-height: 1
 		margin-bottom: 55px
+		+xs
+			font-size: 18px
+			margin-bottom: 15px
 	&__line
 		+clr
 		margin-bottom: 21px
+		+xs
+			margin-bottom: 10px
 		&:last-of-type
 			margin-bottom: 0
+			+xs
+				margin-bottom: 10px
 	&__left, &__right
 		color: $black
 		font-size: 18px
 		max-width: 60%
+		+xs
+			font-size: 14px
 	&__left
 		float: left
 	&__right
@@ -390,6 +509,15 @@
 		position: absolute
 		bottom: 14px
 		left: 20px
+		+xs
+			position: static
+			color: $red
+			display: block
+			max-width: 200px
+			&:hover
+				color: $white
+				background: $white
+
 	&:hover
 		.pslide__bg
 			&:before, &:after
@@ -399,6 +527,8 @@
 			background-color: $red
 .prefooter
 	padding-top: 33px
+	+xs
+		padding-top: 10px
 	&__title
 		margin-bottom: 27px
 	&__text
@@ -407,5 +537,7 @@
 		color: $black
 		margin-bottom: 45px
 		line-height: 1.2
+		+xs
+			font-size: 14px
 		a
 			color: $blue2

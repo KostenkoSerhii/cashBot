@@ -1,13 +1,25 @@
 .form
+	+m
+		max-width: 700px
+		margin-left: auto
+		margin-right: auto
 	&__two-col
 		+clr
 	&__left
 		float: left
 		width: 41.2%
 		padding-right: 30px
+		+m
+			float: none
+			width: 100%
+
+			padding-right: 0
 	&__right
 		float: right
 		width: 58.8%
+		+m
+			float: none
+			width: 100%
 	&__field
 		input, textarea
 			width: 100%
@@ -28,3 +40,5 @@
 			resize: none
 	&__btn-line
 		text-align: right
+		+m
+			text-align: center

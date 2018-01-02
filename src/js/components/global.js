@@ -1,12 +1,19 @@
 export function isResp991() {
-  let windowWidth = $(document).width();
+	let windowWidth = $(document).width();
 
-  if (windowWidth < 992) return true;
-  return false;
+	if (windowWidth < 992) return true;
+	return false;
 }
-export function isResp1129() {
-  let windowWidth = $(document).width();
+export function isResp1170() {
+	let windowWidth = $(document).width();
 
-  if (windowWidth < 1130) return true;
-  return false;
+	if (windowWidth < 1170) return true;
+	return false;
+}
+
+export function isResp767() {
+	let windowWidth = $(document).width();
+
+	if (windowWidth < 768) return true;
+	return false;
 }

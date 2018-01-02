@@ -74,8 +74,9 @@ body
 	line-height: 1
 	font-size: 30px
 	+m
-		font-size: 20px
+		font-size: 22px
 		margin-bottom: 20px
+		text-align: center
 	strong
 		font-weight: normal
 		font-weight: 700
@@ -282,12 +283,16 @@ blockquote
 	font-weight: 100
 	color: $white
 	font-size: 16px
+	+lg
+		font-size: 14px
 	strong
 		font-weight: 500
 	li
 		padding-left: 44px
 		position: relative
 		margin-bottom: 20px
+		+lg
+			margin-bottom: 15px
 		&:last-of-type
 			margin-bottom: 0
 		&:before, &:after
@@ -315,13 +320,21 @@ blockquote
 	padding: 8px 20px 35px
 	text-align: center
 	+play
+	+lg
+		padding: 8px 10px 35px
+	+m
+		border-left: 2px solid $white
 	&__text
 		font-size: 24px
 		color: $white
 		margin-bottom: 27px
+		+m
+			font-size: 20px
 	&__inner
 		font-size: 0
 		padding-left: 56px
+		+lg
+			padding-left: 0
 		span
 			width: 32px
 			height: 42px
@@ -334,6 +347,11 @@ blockquote
 			display: inline-block
 			vertical-align: top
 			margin-right: 3px
+			+m
+				width: 20px
+				height: 30px
+				font-size: 20px
+				line-height: 26px
 			&.counter__number-big-mr
 				margin-right: 11px
 		i
@@ -354,16 +372,19 @@ blockquote
 	transform: translateY(-50%)
 	height: 40px
 	width: 24px
-
+	
 	cursor: pointer
 	svg
 		font-size: 24px
 		+trans
 		fill: $blue2
+		+xs
+			font-size: 20px
 	&:hover
 		svg
 			fill: $blue6
 .prev-arrow
 	left: -30px
+
 .next-arrow
 	right: -30px

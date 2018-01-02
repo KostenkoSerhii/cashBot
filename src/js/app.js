@@ -39,7 +39,18 @@ $(document).ready(function(){
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		viewBox="0 0 204 333" enable-background="new 0 0 204 333" xml:space="preserve">
 		<polygon points="5,25.4 25.7,6 197,166 25.7,326 5,306.7 155.5,166 "/>
-		</svg></div>`
+		</svg></div>`,
+		  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true
+      }
+    }
+
+  ]
 		// centerMode: true,
 		// centerPadding: '80px',
 		// variableWidth: true
