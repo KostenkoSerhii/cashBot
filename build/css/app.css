@@ -760,18 +760,29 @@ blockquote:before {
   background: #133045;
 }
 
-.hero__bg {
+.hero__bg, .hero__bg-spec {
   position: absolute;
   left: 50%;
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  top: 0;
   z-index: -2;
   width: 100%;
   min-width: 1920px;
-  height: 990px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero__bg {
+  height: 940px;
+  top: 0;
+  background-position: 50% 100%;
+}
+
+.hero__bg-spec {
+  height: 355px;
+  z-index: 1;
+  bottom: -370px;
+  background-position: -26px 0%;
 }
 
 .hero__logo-block {
@@ -1435,7 +1446,7 @@ blockquote:before {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   top: 0;
-  z-index: -3;
+  z-index: -1;
   width: 100%;
   min-width: 1920px;
   height: 1088px;
