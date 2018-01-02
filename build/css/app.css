@@ -749,6 +749,17 @@ blockquote:before {
   min-height: 650px;
 }
 
+.hero:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 630px;
+  left: 0;
+  top: 0;
+  z-index: -3;
+  background: #133045;
+}
+
 .hero__bg {
   position: absolute;
   left: 50%;
@@ -792,6 +803,10 @@ blockquote:before {
   min-height: 144px;
 }
 
+.hero--sm:before {
+  height: 140px;
+}
+
 .hero--sm .hero__bg {
   height: 430px;
   background-size: cover;
@@ -808,6 +823,17 @@ blockquote:before {
   padding-bottom: 20px;
   margin-top: 50px;
   min-height: 214px;
+}
+
+.footer:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: #133045;
+  z-index: -3;
 }
 
 .footer__bg {

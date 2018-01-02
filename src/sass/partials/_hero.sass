@@ -2,6 +2,15 @@
 	position: relative
 	padding-top: 56px
 	min-height: 650px
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 630px
+		left: 0
+		top: 0
+		z-index: -3
+		background: #133045
 	&__bg
 		position: absolute
 		left: 50%
@@ -13,6 +22,7 @@
 		height: 990px
 		background-repeat: no-repeat
 		background-size: cover
+
 	&__inner
 	&__logo-block
 		text-align: center
@@ -36,6 +46,8 @@
 		padding-bottom: 20px
 		margin-bottom: 50px
 		min-height: 144px
+		&:before
+			height: 140px
 		+bigmin
 			margin-bottom: 60px
 		+m
