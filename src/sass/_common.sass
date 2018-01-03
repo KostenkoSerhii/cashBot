@@ -293,6 +293,8 @@ blockquote
 		margin-bottom: 20px
 		+lg
 			margin-bottom: 15px
+		+m
+			padding-left: 30px
 		&:last-of-type
 			margin-bottom: 0
 		&:before, &:after
@@ -305,6 +307,9 @@ blockquote
 			height: 29px
 			background: $white
 			z-index: 1
+			+m
+				width: 20px
+				height: 20px
 		&:after
 			background-image: url('../img/check.png')
 			width: 27px
@@ -313,6 +318,11 @@ blockquote
 			top: 2px
 			background-position: 50% 50%
 			z-index: 2
+			+m
+				width: 17px
+				height: 17px
+				background-size: 17px 17px
+				top: 4px
 .counter
 	border-top: 2px solid $white
 	border-right: 2px solid $white
@@ -385,6 +395,10 @@ blockquote
 			fill: $blue6
 .prev-arrow
 	left: -30px
+	+lgmin
+		left: -50px
 
 .next-arrow
 	right: -30px
+	+lgmin
+		right: -50px

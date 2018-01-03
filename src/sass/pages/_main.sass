@@ -281,6 +281,7 @@
 			line-height: 1.2
 			+m
 				font-size: 15px
+				margin-bottom: 20px
 	&__img
 		margin-bottom: 28px
 		+m
@@ -291,6 +292,13 @@
 			font-size: 80px
 			+m
 				font-size: 60px
+	&__mob-arrow
+		display: none
+		+m
+			display: block
+		svg
+			font-size: 20px
+			fill: $bg-blue
 .why-we
 	position: relative
 	min-height: 496px
@@ -527,8 +535,8 @@
 			background-color: $red
 .prefooter
 	padding-top: 33px
-	+xs
-		padding-top: 10px
+	+m
+		padding-top: 0
 	&__title
 		margin-bottom: 27px
 	&__text
@@ -537,6 +545,8 @@
 		color: $black
 		margin-bottom: 45px
 		line-height: 1.2
+		+m
+			font-size: 16px
 		+xs
 			font-size: 14px
 		a

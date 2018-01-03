@@ -112,40 +112,44 @@ html {
   content: "";
 }
 
-.icon-arrow-l:before {
+.icon-arrow-d:before {
   content: "";
 }
 
-.icon-arrow-r:before {
+.icon-arrow-l:before {
   content: "";
 }
 
-.icon-btc:before {
+.icon-arrow-r:before {
   content: "";
 }
 
-.icon-coin:before {
+.icon-btc:before {
   content: "";
 }
 
-.icon-facebook:before {
+.icon-coin:before {
   content: "";
 }
 
-.icon-graph:before {
+.icon-facebook:before {
   content: "";
 }
 
-.icon-money:before {
+.icon-graph:before {
   content: "";
 }
 
-.icon-travel:before {
+.icon-money:before {
   content: "";
 }
 
-.icon-wallet:before {
+.icon-travel:before {
   content: "";
+}
+
+.icon-wallet:before {
+  content: "";
 }
 
 .icon-about-step2 {
@@ -170,6 +174,12 @@ html {
   width: 1.18em;
   height: 1em;
   fill: #222220;
+}
+
+.icon-arrow-d {
+  width: 0.78em;
+  height: 1em;
+  fill: initial;
 }
 
 .icon-arrow-l {
@@ -1646,6 +1656,15 @@ blockquote:before {
   font-size: 80px;
 }
 
+.asteps__mob-arrow {
+  display: none;
+}
+
+.asteps__mob-arrow svg {
+  font-size: 20px;
+  fill: #0171c5;
+}
+
 .why-we {
   position: relative;
   min-height: 496px;
@@ -2320,6 +2339,12 @@ blockquote:before {
 }
 
 @media only screen and (min-width: 1171px){
+  .prev-arrow{
+    left: -50px;
+  }
+  .next-arrow{
+    right: -50px;
+  }
   .hero__light{
     margin-left: -223px;
     animation-name: blink;
@@ -2437,6 +2462,19 @@ blockquote:before {
   }
   blockquote:before{
     left: 0;
+  }
+  .checklist li{
+    padding-left: 30px;
+  }
+  .checklist li:before{
+    width: 20px;
+    height: 20px;
+  }
+  .checklist li:after{
+    width: 17px;
+    height: 17px;
+    background-size: 17px 17px;
+    top: 4px;
   }
   .counter{
     border-left: 2px solid #fff;
@@ -2595,12 +2633,16 @@ blockquote:before {
   }
   .asteps__item p{
     font-size: 15px;
+    margin-bottom: 20px;
   }
   .asteps__img{
     margin-bottom: 15px;
   }
   .asteps__img svg{
     font-size: 60px;
+  }
+  .asteps__mob-arrow{
+    display: block;
   }
   .why-we{
     padding-top: 30px;
@@ -2629,6 +2671,12 @@ blockquote:before {
   }
   .plans__inner{
     max-width: 360px;
+  }
+  .prefooter{
+    padding-top: 0;
+  }
+  .prefooter__text{
+    font-size: 16px;
   }
   .cab__links-line{
     margin-bottom: 20px;
@@ -2682,6 +2730,7 @@ blockquote:before {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.29);
   }
 }
 
@@ -2798,9 +2847,6 @@ blockquote:before {
   .pslide__btn:hover{
     color: #fff;
     background: #fff;
-  }
-  .prefooter{
-    padding-top: 10px;
   }
   .prefooter__text{
     font-size: 14px;

@@ -15,7 +15,7 @@ function scrollMagic(){
 // about hand anim
 new ScrollMagic.Scene({
 		// duration: 100,	
-		offset: 80,
+		offset: 50,
 		triggerElement: ".js-about-hand",
 		reverse: false
 	})
@@ -25,7 +25,7 @@ new ScrollMagic.Scene({
 });
 // about step anim
 new ScrollMagic.Scene({
-	offset: 150,
+	offset: 200,
 	triggerElement: ".js-steps",
 	reverse: false
 })

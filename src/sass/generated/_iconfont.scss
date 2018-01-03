@@ -13,15 +13,16 @@ $icon-about-step2: "\EA01";
 $icon-about-step3: "\EA02";
 $icon-about-step5: "\EA03";
 $icon-about-step6: "\EA04";
-$icon-arrow-l: "\EA05";
-$icon-arrow-r: "\EA06";
-$icon-btc: "\EA07";
-$icon-coin: "\EA08";
-$icon-facebook: "\EA09";
-$icon-graph: "\EA0A";
-$icon-money: "\EA0B";
-$icon-travel: "\EA0C";
-$icon-wallet: "\EA0D";
+$icon-arrow-d: "\EA05";
+$icon-arrow-l: "\EA06";
+$icon-arrow-r: "\EA07";
+$icon-btc: "\EA08";
+$icon-coin: "\EA09";
+$icon-facebook: "\EA0A";
+$icon-graph: "\EA0B";
+$icon-money: "\EA0C";
+$icon-travel: "\EA0D";
+$icon-wallet: "\EA0E";
 
 
 %icon {
@@ -44,6 +45,7 @@ $icon-wallet: "\EA0D";
 .icon-about-step3:before { content: $icon-about-step3; }
 .icon-about-step5:before { content: $icon-about-step5; }
 .icon-about-step6:before { content: $icon-about-step6; }
+.icon-arrow-d:before { content: $icon-arrow-d; }
 .icon-arrow-l:before { content: $icon-arrow-l; }
 .icon-arrow-r:before { content: $icon-arrow-r; }
 .icon-btc:before { content: $icon-btc; }
