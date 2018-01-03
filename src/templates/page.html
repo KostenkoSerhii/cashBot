@@ -34,12 +34,13 @@ slider: [
 }
 ]
 ---
-{% extends "layouts/_layout.html" %}
+{% extends "layouts/_layout-preloader.html" %}
 
 {% block content %}
+{% include "partials/_preloader.html" %}
 {% include "partials/_header.html" %}
 <!--begin content-block-->
-<div class="content-block">
+<div class="content-block js-home-page">
 	{% include "partials/_hero.html" %}
 	<!--begin about-->
 	<div class="about ">

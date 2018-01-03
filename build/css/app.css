@@ -2348,8 +2348,8 @@ blockquote:before {
   .hero__light{
     margin-left: -223px;
     animation-name: blink;
-    animation-duration: 3s;
-    animation-delay: 2s;
+    animation-duration: 6s;
+    animation-delay: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     -ms-transform-origin: 50% 50%;

@@ -10,10 +10,125 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Play:400,700|Roboto:100,300,300i,400,500,700&amp;subset=cyrillic-ext" rel="stylesheet"> </head>
+  <style>
+    .preloader {
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .preloader__left,
+    .preloader__right {
+      width: 51%;
+      height: 100%;
+      background: #f0f4f7;
+      transition: all 1.5s;
+      opacity: 1;
+      top: 0;
+      position: absolute;
+    }
+
+    .preloader__left {
+      left: 0;
+    }
+
+    .preloader__right {
+      right: 0;
+    }
+
+    .preloader__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .preloader.is-load .preloader__left {
+      left: -100%;
+    }
+
+    .preloader.is-load .preloader__right {
+      right: -100%;
+    }
+
+    .spinner,
+    .spinner:before,
+    .spinner:after {
+      border: 3px solid transparent;
+      border-radius: 50%;
+    }
+
+    .spinner {
+      width: 150px;
+      height: 150px;
+      border-top-color: #42598a;
+      animation: spin 1s infinite linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -75px;
+      margin-top: -75px;
+      z-index: 1001;
+    }
+
+    .spinner:before,
+    .spinner:after {
+      content: '';
+      position: absolute;
+    }
+
+    .spinner:before {
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-top-color: yellow;
+      animation: spin 2s infinite linear;
+    }
+
+    .spinner:after {
+      top: 23px;
+      left: 23px;
+      right: 23px;
+      bottom: 23px;
+      border-top-color: #4aa153;
+      animation: spin 3s infinite linear;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media only screen and (max-width: 1199px) {
+      .preloader {
+        display: none;
+      }
+    }
+
+  </style>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
+      <!--begin preloader-->
+      <div class="preloader js-preloader">
+        <div class="preloader__left js-preloader-left"></div>
+        <div class="preloader__right js-preloader-right"></div>
+        <div class="preloader__content">
+          <div class="spinner js-spinner"></div>
+        </div>
+      </div>
+      <!--end preloader-->
       <header class="header">
         <!--begin l-->
         <div class="l">
@@ -45,7 +160,7 @@
         <!--end l-->
       </header>
       <!--begin content-block-->
-      <div class="content-block">
+      <div class="content-block js-home-page">
         <!--begin hero-->
         <div class="hero">
           <div class="hero__bg" style="background-image: url('img/hero.png');"></div>

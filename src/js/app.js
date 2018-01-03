@@ -6,6 +6,7 @@ import aboutStepsAnim from './components/about-steps-animation.js';
 import whyWeAnim from './components/why-we-amination.js';
 import slick from 'slick-carousel';
 import Select from './components/select.js';
+import {isResp1170} from './components/global.js';
 $(document).ready(function(){
 
 	svgUseIt();
@@ -40,17 +41,17 @@ $(document).ready(function(){
 		viewBox="0 0 204 333" enable-background="new 0 0 204 333" xml:space="preserve">
 		<polygon points="5,25.4 25.7,6 197,166 25.7,326 5,306.7 155.5,166 "/>
 		</svg></div>`,
-		  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true
-      }
-    }
+		responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true
+			}
+		}
 
-  ]
+		]
 		// centerMode: true,
 		// centerPadding: '80px',
 		// variableWidth: true
@@ -58,3 +59,19 @@ $(document).ready(function(){
 	//end
 });
 
+$(window).on("load", function(){
+	if (!isResp1170()) {
+		if ($(".js-home-page")) {
+			$(".js-spinner").fadeOut(400);
+
+			setTimeout(function() {
+				$(".js-preloader").addClass("is-load");
+			}, 200);
+			setTimeout(function() {
+				$(".js-preloader").css("display", "none");
+			}, 1700);
+
+		};
+	};
+
+})

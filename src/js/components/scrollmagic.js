@@ -6,7 +6,11 @@ import {isResp1170} from './global.js';
 
 function scrollMagic(){
 	if(isResp1170()) return;
-	
+	let windowH = $(window).height();
+	let handOffset;
+	if(windowH > 750){
+		handOffset = 200;
+	}
 	let controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
 			triggerHook: "onEnter"
@@ -15,7 +19,7 @@ function scrollMagic(){
 // about hand anim
 new ScrollMagic.Scene({
 		// duration: 100,	
-		offset: 50,
+		offset: 100,
 		triggerElement: ".js-about-hand",
 		reverse: false
 	})
