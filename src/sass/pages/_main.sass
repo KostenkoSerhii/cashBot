@@ -418,8 +418,7 @@
 		height: 100%
 		z-index: 0
 		overflow: hidden
-		+xs
-			display: none
+
 		&:before, &:after
 			content: ''
 			position: absolute
@@ -439,6 +438,8 @@
 		&:after
 			bottom: -235px
 			left: -48px
+			+xs
+				bottom: -250px
 		&--blue-l
 			&:before, &:after
 				background-image: linear-gradient(180deg, #328cab 0%, #03bafd 100%)
@@ -456,10 +457,10 @@
 		text-align: center
 		position: relative
 		margin-bottom: 23px
-		+xs
-			font-size: 20px
-			margin-bottom: 15px
-			color: $blue
+		// +xs
+		// 	font-size: 20px
+		// 	margin-bottom: 15px
+		// 	color: $blue
 		&:after
 			content: ''
 			position: absolute
@@ -473,10 +474,10 @@
 		color: $white
 		font-weight: 700
 		text-align: right
-		+xs
-			color: $blue
-			text-align: center
-			padding-right: 0
+		// +xs
+		// 	color: $blue
+		// 	text-align: center
+		// 	padding-right: 0
 	&__btc
 		font-size: 22px
 		padding-right: 8px
@@ -492,7 +493,7 @@
 		margin-bottom: 55px
 		+xs
 			font-size: 18px
-			margin-bottom: 15px
+			margin-bottom: 55px
 	&__line
 		+clr
 		margin-bottom: 21px
@@ -501,7 +502,7 @@
 		&:last-of-type
 			margin-bottom: 0
 			+xs
-				margin-bottom: 10px
+				margin-bottom: 110px
 	&__left, &__right
 		color: $black
 		font-size: 18px
@@ -519,12 +520,12 @@
 		left: 20px
 		+xs
 			position: static
-			color: $red
-			display: block
-			max-width: 200px
-			&:hover
-				color: $white
-				background: $white
+			// color: $red
+			// display: block
+			// max-width: 200px
+			// &:hover
+			// 	color: $white
+			// 	background: $white
 
 	&:hover
 		.pslide__bg

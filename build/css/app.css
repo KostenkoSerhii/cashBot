@@ -840,10 +840,19 @@ blockquote:before {
   z-index: -1;
   left: 50%;
   top: -13px;
+  margin-left: -223px;
+  animation-name: blink;
+  animation-duration: 6s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 .hero__light--main {
   top: -23px;
+  margin-left: -340px;
 }
 
 .hero--sm {
@@ -2345,19 +2354,6 @@ blockquote:before {
   .next-arrow{
     right: -50px;
   }
-  .hero__light{
-    margin-left: -223px;
-    animation-name: blink;
-    animation-duration: 6s;
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -ms-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-  }
-  .hero__light--main{
-    margin-left: -340px;
-  }
   .about__title, .about__hand, .about__text{
     opacity: 0;
   }
@@ -2393,10 +2389,6 @@ blockquote:before {
   }
   .counter__inner{
     padding-left: 0;
-  }
-  .hero__light{
-    -ms-transform: translate(-50%, 0%);
-    transform: translate(-50%, 0%);
   }
   .footer__bg{
     height: 100%;
@@ -2517,6 +2509,11 @@ blockquote:before {
   .hero__logo{
     width: 208px;
     height: auto;
+  }
+  .hero__light{
+    width: 260px;
+    top: 4px;
+    margin-left: -130px;
   }
   .hero--sm{
     margin-bottom: 20px;
@@ -2763,10 +2760,6 @@ blockquote:before {
     font-size: 14px;
     padding: 5px;
   }
-  .hero__light{
-    width: 260px;
-    top: 4px;
-  }
   .table a{
     font-size: 14px;
   }
@@ -2805,48 +2798,31 @@ blockquote:before {
     min-height: auto;
     padding: 10px 15px 15px;
   }
-  .pslide__bg{
-    display: none;
-  }
   .pslide__bg:before{
     top: -230px;
     left: -60px;
   }
-  .pslide__title{
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #3f8bc6;
-  }
-  .pslide__btc, .pslide__perc{
-    color: #3f8bc6;
-    text-align: center;
-    padding-right: 0;
+  .pslide__bg:after{
+    bottom: -250px;
   }
   .pslide__btc{
     font-size: 16px;
   }
   .pslide__perc{
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 55px;
   }
   .pslide__line{
     margin-bottom: 10px;
   }
   .pslide__line:last-of-type{
-    margin-bottom: 10px;
+    margin-bottom: 110px;
   }
   .pslide__left, .pslide__right{
     font-size: 14px;
   }
   .pslide__btn{
     position: static;
-    color: #fb270b;
-    display: block;
-    max-width: 200px;
-  }
-  .pslide__btn:hover{
-    color: #fff;
-    background: #fff;
   }
   .prefooter__text{
     font-size: 14px;

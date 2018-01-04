@@ -96,25 +96,22 @@
 		z-index: -1
 		left: 50%
 		top: -13px
-		
-		
-		+lgmin
-			margin-left: -223px
-			animation-name: blink 
-			animation-duration: 6s
-			animation-delay: 3s
-			animation-iteration-count: infinite
-			animation-timing-function: linear
-			transform-origin: 50% 50%
-		+lg
-			transform: translate(-50%, 0%)
+		margin-left: -223px
+		animation-name: blink 
+		animation-duration: 6s
+		animation-delay: 3s
+		animation-iteration-count: infinite
+		animation-timing-function: linear
+		transform-origin: 50% 50%
+		// +lg
+		// 	transform: translate(-50%, 0%)
 		&--main
 			top: -23px
-			+lgmin
-				margin-left: -340px
-		+xs
+			margin-left: -340px
+		+m
 			width: 260px
 			top: 4px
+			margin-left: -130px
 	&--sm
 		padding-top: 21px
 		padding-bottom: 20px
